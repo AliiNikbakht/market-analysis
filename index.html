@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بررسی جامع بازار سرمایه</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
+        
+        :root {
+            --bg: #0a0e1a;
+            --surface: #111827;
+            --card: #161d2e;
+            --border: rgba(255,255,255,0.07);
+            --accent: #3b82f6;
+            --gold: #d4a853;
+            --text: #f1f5f9;
+            --muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 50px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--text);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: 1.2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: transparent;
+            transition: background 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: #1a233a;
+        }
+
+        .card.ime:hover::before { background: var(--gold); }
+        .card.teseh:hover::before { background: var(--accent); }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card.ime h3 { color: var(--gold); }
+        .card.teseh h3 { color: var(--accent); }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .card .btn-enter {
+            align-self: flex-end;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .card:hover .btn-enter {
+            background: var(--text);
+            color: var(--bg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>بررسی جامع بازار سرمایه</h1>
+            <p>داشبوردها و ابزارهای تحلیلی پیشرفته بورس کالا و بازار مسکن</p>
+        </header>
+
+        <div class="grid">
+            <a href="ime.html" class="card ime">
+                <div>
+                    <h3>📊 عملکرد بورس کالا</h3>
+                    <p>تحلیل و بررسی گواهی‌های سپرده بورس کالا، روند تغییرات قیمت، حجم معاملات و نمودارهای مقایسه‌ای متغیرهای کلیدی بازار گواهی سپرده کالایی
+                </div>
+                <span class="btn-enter">ورود به داشبورد ←</span>
+            </a>
+
+            <a href="teseh.html" class="card teseh">
+                <div>
+                    <h3>🏠 اوراق تسهیلات مسکن (تسه)</h3>
+                    <p>رصد نرخ بازدهی، تحلیل زمانی رفتار خریداران، نمودارهای هیت‌مپ سالانه و ابزارهای پایش قیمت اوراق تسهیلات مسکن بانک مسکن و بانک ملی.</p>
+                </div>
+                <span class="btn-enter">ورود به داشبورد ←</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
