@@ -14,6 +14,7 @@
             --border: rgba(255,255,255,0.07);
             --accent: #3b82f6;
             --gold: #d4a853;
+            --purple: #8b5cf6;
             --text: #f1f5f9;
             --muted: #64748b;
         }
@@ -29,7 +30,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -54,8 +55,8 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 20px;
         }
 
@@ -63,7 +64,7 @@
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px;
             transition: all 0.3s ease;
             text-decoration: none;
             color: var(--text);
@@ -87,16 +88,17 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             background: #1a233a;
         }
 
         .card.ime:hover::before { background: var(--gold); }
         .card.teseh:hover::before { background: var(--accent); }
+        .card.trends:hover::before { background: var(--purple); }
 
         .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -104,6 +106,7 @@
 
         .card.ime h3 { color: var(--gold); }
         .card.teseh h3 { color: var(--accent); }
+        .card.trends h3 { color: var(--purple); }
 
         .card p {
             font-size: 0.95rem;
@@ -135,14 +138,14 @@
     <div class="container">
         <header>
             <h1>بررسی جامع بازار سرمایه</h1>
-            <p>داشبوردها و ابزارهای تحلیلی پیشرفته بورس کالا و بازار مسکن</p>
+            <p>داشبوردها و ابزارهای تحلیلی پیشرفته بورس کالا، مسکن و متغیرهای کلان کل بازار</p>
         </header>
 
         <div class="grid">
             <a href="ime.html" class="card ime">
                 <div>
                     <h3>📊 عملکرد بورس کالا</h3>
-                    <p>تحلیل و بررسی گواهی‌های سپرده بورس کالا، روند تغییرات قیمت، حجم معاملات و نمودارهای مقایسه‌ای متغیرهای کلیدی بازار گواهی سپرده کالایی
+                    <p>تحلیل و بررسی گواهی‌های سپرده بورس کالا، روند تغییرات قیمت، حجم معاملات و نمودارهای مقایسه‌ای متغیرهای کلیدی بازار کالا.</p>
                 </div>
                 <span class="btn-enter">ورود به داشبورد ←</span>
             </a>
@@ -151,6 +154,14 @@
                 <div>
                     <h3>🏠 اوراق تسهیلات مسکن (تسه)</h3>
                     <p>رصد نرخ بازدهی، تحلیل زمانی رفتار خریداران، نمودارهای هیت‌مپ سالانه و ابزارهای پایش قیمت اوراق تسهیلات مسکن بانک مسکن و بانک ملی.</p>
+                </div>
+                <span class="btn-enter">ورود به داشبورد ←</span>
+            </a>
+
+            <a href="market_trends.html" class="card trends">
+                <div>
+                    <h3>📈 روند کلان و متغیرهای بنیادی</h3>
+                    <p>تحلیل زمانی نسبت‌های مالی P/E و P/B کل بازار، رصد ارزش دلاری بازار سرمایه و پایش تغییرات نرخ بهره بدون ریسک (RFR).</p>
                 </div>
                 <span class="btn-enter">ورود به داشبورد ←</span>
             </a>
